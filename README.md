@@ -1,5 +1,17 @@
 # Data Analysis and NLP
 
+## Required Models/Resources
+
+To run this project successfully, you'll need to download certain pre-trained models and resources. You can obtain them from the following links:
+
+- **Wikipedia, PubMed, and PMC Word2Vec Model:**
+  - [Download Link](http://evexdb.org/pmresources/vec-space-models/wikipedia-pubmed-and-PMC-w2v.bin)
+
+- **BioWordVec PubMed and MIMIC-III Vector Model:**
+  - [Download Link](https://ftp.ncbi.nlm.nih.gov/pub/lu/Suppl/BioSentVec/BioWordVec_PubMed_MIMICIII_d200.vec.bin)
+
+Make sure to download and place these models in the appropriate directories (inside a models directory) before running the code. Refer to the documentation for instructions on how to incorporate them into the project.
+
 ## Project Overview
 
 This repository is a comprehensive project that integrates data analysis with advanced natural language processing (NLP) techniques. Led by Alexandre Cogordan and Alexandre Brosseau, the project focuses on processing and analyzing textual data.
@@ -96,3 +108,11 @@ We conducted evaluations to identify impactful factors and optimized their range
 Based on the 150 first documents, we achieved an NDCG score of 0.912. Despite implemented solutions not directly improving scores, assumptions were made regarding vector usage. The project provides a satisfactory score for practical applications.
 
 For detailed code implementation, refer to the [code repository](https://bit.ly/projet-nlp).
+
+Here are some of the theses and resources that influenced our work:
+
+- [SABER: A Visual Analysis System for Comparative Bio-Molecular Entity Recognition](https://baderlab.github.io/saber/resources/)
+- [Article: Visual Analytics in Healthcare – Opportunities and Research Challenges](https://www.sciencedirect.com/science/article/pii/S2590177X19300563#b0245)
+- [BioSentVec: Creating sentence embeddings for biomedical texts](https://github.com/ncbi-nlp/BioSentVec)
+
+Feel free to explore these resources for a deeper understanding of the domain and methodologies applied in our project.
