@@ -1,0 +1,14 @@
+biowordvec
+Should we remove hyphens (like deep-fried can be just deepfried to avoid the two instances) -Lemantization?
+Utiliser un modele supervisé pour faire un resume des documents
+
+We used these resources:
+
+https://baderlab.github.io/saber/resources/
+https://www.sciencedirect.com/science/article/pii/S2590177X19300563#b0245
+https://github.com/ncbi-nlp/BioSentVec
+
+To download resources:
+
+http://evexdb.org/pmresources/vec-space-models/wikipedia-pubmed-and-PMC-w2v.bin
+https://ftp.ncbi.nlm.nih.gov/pub/lu/Suppl/BioSentVec/BioWordVec_PubMed_MIMICIII_d200.vec.bin
