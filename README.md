@@ -1,4 +1,4 @@
-# Data Analysis and NLP Project Readme
+# Data Analysis and NLP
 
 ## Project Overview
 
