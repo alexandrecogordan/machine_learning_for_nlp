@@ -1,42 +1,62 @@
-# Machine Learning
+# NLP Project Readme
 
-Brief project description and purpose.
+## Project Overview
+This repository contains code and documentation for an NLP project focused on improving information retrieval using various models and techniques. The project is led by Alexandre Cogordan and Alexandre Brosseau.
 
-## Table of Contents
+### Table of Contents
+- [Our Analysis](#our-analysis)
+- [Creating Our Solution](#creating-our-solution)
+  - [Pre-Processing](#pre-processing)
+  - [Models](#models)
+- [Evaluation of Our Factors Using a Graph](#evaluation-of-our-factors-using-a-graph)
+  - [Chosen Factors](#chosen-factors)
+- [Challenges & Explorations](#challenges--explorations)
+  - [Challenges](#challenges)
+  - [Explorations](#explorations)
+- [Our Result](#our-result)
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Examples](#examples)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+## Our Analysis
 
-## Introduction
+We started by analyzing the provided corpus, gaining insights into queries and documents. The existing code was refactored for clarity, breaking it into functions for better understanding and efficiency.
 
-A short introduction to your project, explaining its purpose, main features, and any other relevant information.
+## Creating Our Solution
 
-## Features
+### Pre-Processing
 
-Highlight the key features of your project. What makes it unique or useful?
+The pre-processing stage was enhanced with the implementation of the `clean_sentence` function, addressing noise removal, text standardization, lemmatization, and word length filtering.
 
-## Getting Started
+### Models
 
-Guide users on setting up and running your project locally. Include information about prerequisites and installation steps.
+Multiple models, including BM25, Word2Vec, GloVe, BioWordVec, and Wikipedia-Pubmed, were explored. We introduced a scoring function to weigh the influence of each model and experimented with different factors.
 
-### Prerequisites
+## Evaluation of Our Factors Using a Graph
 
-List any software, libraries, or dependencies that users need to have installed before running your project.
+We conducted evaluations to identify impactful factors and optimized their ranges for optimal scores.
 
-### Installation
+### Chosen Factors
 
-Provide step-by-step instructions on how to install your project. Use code blocks and make it easy for users to follow.
+- Keeping the relevant documents: False
+- Model’s vector size: 300
+- Model’s vector window: 50
+- Model’s minimum word count: 1
+- Alpha value: 1
+- Choice between cbow (sg = 0) or skip-gram (sg = 1): 0
 
-```bash
-# Example installation steps
-git clone https://github.com/your-username/your-project.git
-cd your-project
-pip install -r requirements.txt
+## Challenges & Explorations
+
+### Challenges
+
+- Attempted improvements in pre-processing, including N-grams, led to worse scores.
+- Limiting documents to the first 150 words resulted in a score drop.
+- Summarization attempts were resource-intensive and impractical.
+
+### Explorations
+
+- Biobert or ClinicalBERT models could have been explored.
+- Additional explorations like normalizing dates or handling medical acronyms were considered.
+
+## Our Result
+
+Based on the 150 first documents, we achieved an NDCG score of 0.912. Despite implemented solutions not directly improving scores, assumptions were made regarding vector usage. The project provides a satisfactory score for practical applications.
+
+For detailed code implementation, refer to the [code repository](https://bit.ly/projet-nlp).
